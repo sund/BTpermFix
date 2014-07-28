@@ -3,10 +3,11 @@
 ###
 ## parse config 
 #
+workingDir=$(dirname $(readlink -f $0))
 
-if [ -e btsync.conf ]
+if [ -e $workingDir/btsync.conf ]
 then
-    source btsync.conf
+    source $workingDir/btsync.conf
 else {
     echo "no config file found"
     echo "see the readme"
